@@ -1,6 +1,7 @@
 package com.api.ecomerce.model;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,19 +18,26 @@ import org.springframework.lang.Nullable;
 public class Product {
 	
 	@Id
+	@Column (name ="product_id")
 	@Nullable
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
 	@Nullable
+	@Column (name ="product_nmproduct")
 	private String name;
 	
 	@Nullable
+	@Column (name ="product_dsproduct")
 	private String description;
 	
 	@Nullable
+	@Column (name ="product_pcproduct")
 	private BigDecimal price;
 	
+	@Nullable
+	@Column (name ="product_tmultimaalteracao")
+	private Date ultimaAlteracao;
 	
 	public Integer getId() {
 		return id;

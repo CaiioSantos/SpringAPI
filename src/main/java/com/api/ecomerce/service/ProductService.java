@@ -8,7 +8,11 @@ public interface ProductService {
 
 	List<Product> findAll();
 	
-	Product findById(Integer id);
-	Product save(Product product);
+	 Product findById(Integer id);
+	 Product save(Product product);
+	 Product update(Product product);
+	 void  delete(Integer id);
+
+	
 
 }
